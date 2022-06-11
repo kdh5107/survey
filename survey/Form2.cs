@@ -22,8 +22,18 @@ namespace survey
             string q1result = GetQ1Info();
             string q2result = GetQ2Info();
             string q3result = GetQ3Info();
-            string result = string.Format("1번 : {0}, 2번 : {1}, 3번 : {2}, 4번 : {3}", q1result, q2result, q3result, q4.Text);
-            MessageBox.Show("설문에 참여하셨습니다\n설문내용\n"+result,"알림", MessageBoxButtons.OK);
+            if(q1result!="" && q2result!="" && q3result != "")
+            {
+                string result = string.Format("1번 : {0}, 2번 : {1}, 3번 : {2}, 4번 : {3}", q1result, q2result, q3result, q4.Text);
+                MessageBox.Show("설문에 참여하셨습니다\n설문내용\n" + result, "알림", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("문항에 전부 답변해주십시오.");
+            }
+
+            this.Close();
+
         }
 
         private string GetQ3Info()

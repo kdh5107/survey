@@ -25,8 +25,8 @@ namespace survey
         private void 참여자용_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form2 showForm2 = new Form2();
-            showForm2.ShowDialog();
+            Form3 showForm3 = new Form3();
+            showForm3.ShowDialog();
         }
     }
 }
