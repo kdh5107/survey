@@ -19,12 +19,14 @@ namespace survey
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void 참여자용_Click(object sender, EventArgs e)
         {
-
+            this.Visible = false;
+            Form2 showForm2 = new Form2();
+            showForm2.ShowDialog();
         }
     }
 }
